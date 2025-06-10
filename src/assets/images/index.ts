@@ -20,7 +20,13 @@ import project15 from "./project15.png";
 
 import profilePic from "./profilePic.jpeg";
 
-import scrollTopbutton from "./up_arrow.png";
+import dockerCertificate from './c-docker.jpg';
+import dashPythonCertificate from './c-dashPython.jpg';
+import cleanCodeCertificate from './c-cleanCode.jpg';
+import fullstackCertificate from './c-fullstack.jpg';
+import reactCertificate from './c-react.jpg';
+import uniTestSpringBootCertificate from './c-unitTestSpringBoot.jpg';
+import unitTestPythonCertificate from './c-unitTestPython.jpg';
 
 
 export {
@@ -42,9 +48,16 @@ export {
   project14,
   project15,
   
-  scrollTopbutton ,
   
   linkedin,
   github,
   mail,
+  
+  dockerCertificate,
+  dashPythonCertificate,
+  cleanCodeCertificate,
+  fullstackCertificate,
+  reactCertificate,
+  uniTestSpringBootCertificate,
+  unitTestPythonCertificate
 };

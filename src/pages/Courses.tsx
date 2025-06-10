@@ -1,11 +1,16 @@
-import { useState } from "react";
+import { useState, useEffect,useRef } from "react";
 import { courses } from "../constants";
-import Header from "../components/Header";
 
 export default function Courses() {
   const [searchQuery, setSearchQuery] = useState("");
   const [expandedCards, setExpandedCards] = useState<number[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null);
 
+   useEffect(() => {
+    // Focus input when component mounts
+    inputRef.current?.focus();
+  }, []);
+  
   const handleSearchChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setSearchQuery(event.target.value.toLowerCase());
   };
@@ -29,17 +34,22 @@ export default function Courses() {
   };
 
   return (
-    <div className="flex flex-col items-center w-full theme-bg">
-        <Header
-          title="Courses"
-          darkModeSwitcher={true}
-        />
+    <div className="flex flex-col items-center w-full theme-bg max-w-7xl mx-auto p-6">
       <input
         type="text"
         placeholder="Search Keywords"
+        ref={inputRef}
         value={searchQuery}
         onChange={handleSearchChange}
-        className="w-3/5 p-3 mb-5 border border-[#433232] rounded focus:shadow-[inset_2px_2px_15px_#8707ff] focus:outline-none dark:focus:shadow-[inset_2px_2px_15px_#ff00ff] "
+       className="w-3/5 p-3 mb-5 border border-[#433232] rounded 
+          focus:shadow-[inset_2px_2px_15px_#8707ff] 
+          focus:outline-none 
+          dark:focus:shadow-[inset_2px_2px_15px_#ff00ff]
+          placeholder:text-gray-500
+          dark:placeholder:text-gray-400
+          dark:bg-gray-800
+          dark:text-white
+          transition-colors duration-200"
       />
       <div className="grid grid-cols-1  lg:grid-cols-2 gap-4 p-2 sm:p-5 text-[#333] font-sans test-base leading-relaxed shadow-lx hover:shadow-2xl transition-all duration-300 backdrop-blur-sm">
         {filteredCourses.length > 0 ? (
@@ -50,7 +60,7 @@ export default function Courses() {
                   hover:shadow-[0_16px_32px_rgba(0,0,0,0.3)] p-2 relative transform hover:-translate-y-2 transition-all duration-500 ease-in-out
             ${expandedCards.includes(course.id) ? "h-auto" : ""} `}
             >
-              <h2 className="font-bold text-center text-black font-display-swap font-weight-[1.1em]">
+              <h2 className="font-bold sm:text-center text-start text-black font-display-swap font-weight-[1.1em]">
                 {course.title}
               </h2>
               <span
