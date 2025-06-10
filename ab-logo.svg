@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
-  <rect width="100" height="100" rx="50" fill="#67e1ff"/>
-  <text x="50" y="65" font-family="Arial Black" font-size="45" fill="#1b233d" text-anchor="middle">
+  <rect width="100" height="100" rx="50" fill="#8B4CF6"/>
+  <text x="50" y="65" font-family="Arial Black" font-size="45" fill="#FFFFFF" text-anchor="middle">
     AB
   </text>
 </svg>
