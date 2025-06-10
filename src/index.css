@@ -1,68 +1,50 @@
+@import 'tailwindcss';
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
+    --bg-dark: #1F2937;
+    --bg-light: #F9FAFB;
+    --hover-bg-light: #E5E7EB;
+    --hover-bg-dark: #374151;
+    --hover-text-light: #374151;
+    --hover-text-dark: #F9FAFB;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+    /* Default theme variables */
+    --bg-color: var(--bg-light);
+    --text-color: var(--bg-dark);
+    --hover-bg: var(--hover-bg-light);
+    --hover-text: var(--hover-text-light);
+ 
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+/* Dark mode overrides */
+.dark {
+    --bg-color: var(--bg-dark);
+    --text-color: var(--bg-light);
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Single theme class that handles both modes */
+.theme-bg {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.2s ease;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.hover-bg:hover {
+    background-color: var(--hover-bg-light);
+    color: var(--hover-text-light)
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.dark .hover-bg:hover {
+    background-color: var(--hover-bg-dark);
+    color: var(--hover-text-dark)
+}
+
+body{
+  
+    /* AG Grid background override using dynamic variable */
+    --ag-background-color: var(--bg-color);
+    --ag-foreground-color: var(--text-color);
 }
