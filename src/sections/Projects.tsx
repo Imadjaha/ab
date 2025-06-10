@@ -5,9 +5,9 @@ import ProjectCard from "../components/ProjectCard";
 
 const categories = [
   "All Projects",
-  "Typescript",
+  "TypeScript",
   "Python",
-  "Javascript",
+  "JavaScript",
   "Java",
   "Spring Boot",
   "ReactJs",

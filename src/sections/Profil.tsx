@@ -15,7 +15,6 @@ import {
   SiGitlab,
   SiTailwindcss,
   SiRedux,
-  SiNodedotjs,
   SiMongodb,
   SiExpress,
   SiFlask,
@@ -178,7 +177,7 @@ export default function Profile() {
                 {category.name}
               </h3>
               <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4">
-                {category.skills.map((skill, skillIndex) => (
+                {category.skills.map((skill) => (
                   <motion.div
                     key={skill.name}
                     whileHover={{

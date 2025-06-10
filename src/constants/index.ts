@@ -1,10 +1,10 @@
 import {
   project1,
-  project2,
-  project3,
+  // project2,
+  // project3,
   project4,
   project5,
-  project6,
+  // project6,
   project7,
   project8,
   project9,
@@ -13,7 +13,7 @@ import {
   project12,
   project13,
   project14,
-  project15,
+  // project15,
   //   profilePic,
   //   linkedin,
   //   github,
@@ -47,7 +47,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/pomodoro",
     liveDemoLink: "https://imadjaha.github.io/pomodoro/",
     image: project13,
-    category: ["ReactJs", "Tailwind", "CSS", "Typescript"],
+    category: ["ReactJs", "Tailwind", "CSS", "TypeScript"],
   },
   {
     id: 4,
@@ -87,7 +87,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/hangman",
     liveDemoLink: "https://imadjaha.github.io/hangman/",
     image: project7,
-    category: ["ReactJs", "Typescript", "CSS"],
+    category: ["ReactJs", "TypeScript", "CSS"],
   },
   {
     id: 8,
@@ -136,7 +136,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/tic-tac-toe-ReactJs_NextJs/",
     liveDemoLink: "https://imadjaha.github.io/tic-tac-toe-ReactJs_NextJs/",
     image: project4,
-    category: ["ReactJs", "NextJs", "Typescript", "CSS"],
+    category: ["ReactJs", "NextJs", "TypeScript", "CSS"],
   },
 ];
 
