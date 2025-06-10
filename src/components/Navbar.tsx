@@ -136,13 +136,13 @@ const NavBar = () => {
               <span className="ml-2">{item.name}</span>
             </Link>
           ))}
-          
+
           <div className="mt-4 px-3 py-2 border-t border-gray-200 dark:border-gray-700">
             <div className="flex items-center justify-between">
               <span className="text-base font-medium text-gray-700 dark:text-gray-300">
                 Dark Mode
               </span>
-              <DarkModeSwitcher className="scale-110" />
+              <DarkModeSwitcher />
             </div>
           </div>
         </div>

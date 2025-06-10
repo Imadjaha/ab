@@ -1,7 +1,7 @@
-import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { motion } from "framer-motion";
+import Slider from "react-slick";
 import {
   cleanCodeCertificate,
   dashPythonCertificate,
@@ -111,7 +111,7 @@ export default function Certificates() {
   };
 
   return (
-    <div className="w-full theme-bg min-h-screen py-16">
+    <div className="w-full theme-bg min-h-screen pb-16">
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

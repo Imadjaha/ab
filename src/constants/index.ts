@@ -14,10 +14,10 @@ import {
   project13,
   project14,
   project15,
-  profilePic,
-  linkedin,
-  github,
-  mail,
+  //   profilePic,
+  //   linkedin,
+  //   github,
+  //   mail,
 } from "../assets/images";
 
 export const projects = [
@@ -27,6 +27,7 @@ export const projects = [
     description:
       "A full-stack Media Management Tool created with Spring Boot, MariaDB, Vite.js, and Redux.",
     link: "https://github.com/Imadjaha/Media-Management-Tool",
+    liveDemoLink: "",
     image: project11,
     category: ["Java", "Spring Boot", "ReactJs", "Redux", "CSS", "Tailwind"],
   },
@@ -35,6 +36,7 @@ export const projects = [
     title: "Strategy Design Pattern",
     description: "A Strategy Design Pattern created with Java and React.",
     link: "https://github.com/Imadjaha/strategy-design-pattern",
+    liveDemoLink: "",
     image: project12,
     category: ["Java", "ReactJs"],
   },
@@ -43,6 +45,7 @@ export const projects = [
     title: "Pomodoro Timer",
     description: "A Pomodoro Timer created with React and Tailwind.",
     link: "https://github.com/Imadjaha/pomodoro",
+    liveDemoLink: "https://imadjaha.github.io/pomodoro/",
     image: project13,
     category: ["ReactJs", "Tailwind", "CSS", "Typescript"],
   },
@@ -52,6 +55,7 @@ export const projects = [
     description:
       "A full-stack E-Commerce Website created with different backend technologies.",
     link: "https://github.com/Imadjaha/e-commerce",
+    liveDemoLink: "",
     image: project14,
     category: [
       "Java",
@@ -71,24 +75,17 @@ export const projects = [
     description:
       "Get real-time weather information with an easy-to-use interface. Built with ReactJs.",
     link: "https://github.com/Imadjaha/weather-app",
+    liveDemoLink: "https://imadjaha.github.io/weather-app/",
     image: project5,
     category: ["ReactJs", "JavaScript", "CSS"],
-  },
-  {
-    id: 6,
-    title: "Function Diagram",
-    description:
-      " Web app for plotting math functions, offering intuitive interface & export options.",
-    link: "https://imadjaha.github.io/function-diagram/",
-    image: project6,
-    category: ["JavaScript", "CSS"],
   },
   {
     id: 7,
     title: "Hangman Game",
     description:
       "A classic Hangman game created with ReactJs Vite as platform-agnostic frontend.",
-    link: "https://imadjaha.github.io/hangman/",
+    link: "https://github.com/Imadjaha/hangman",
+    liveDemoLink: "https://imadjaha.github.io/hangman/",
     image: project7,
     category: ["ReactJs", "Typescript", "CSS"],
   },
@@ -97,6 +94,7 @@ export const projects = [
     title: "Snake Game",
     description: "A classic Snake game from 19th century. created with Python.",
     link: "https://github.com/Imadjaha/snake-game",
+    liveDemoLink: "",
     image: project8,
     category: ["Python"],
   },
@@ -105,6 +103,7 @@ export const projects = [
     title: "Flappy Bird",
     description: "A classic Flappy Bird game created with Java using Swing.",
     link: "https://github.com/Imadjaha/Flappy-Bird",
+    liveDemoLink: "",
     image: project9,
     category: ["Java"],
   },
@@ -113,6 +112,7 @@ export const projects = [
     title: "Calories Calculator",
     description: "A simple Calories Calculator created with NextJs and CSS.",
     link: "https://github.com/Imadjaha/Calories-Calculator",
+    liveDemoLink: "https://calories-calculator-six.vercel.app/",
     image: project10,
     category: ["NextJs", "CSS"],
   },
@@ -122,45 +122,21 @@ export const projects = [
     title: "Guess The Word Game",
     description:
       "Play 'Guess the Word Game' - a dynamic, color coded challenge to test your word prowess!",
-    link: "https://imadjaha.github.io/guess-the-word-game/",
+    link: "https://github.com/Imadjaha/guess-the-word-game",
+    liveDemoLink: "https://imadjaha.github.io/guess-the-word-game/",
     image: project1,
     category: ["JavaScript", "CSS"],
   },
-  {
-    id: 12,
-    title: "TO-DO List",
-    description:
-      "Create a To-Do List with HTML, CSS & JS, utilizing local storage for persistent data.",
-    link: "https://imadjaha.github.io/to-do-list/",
-    image: project2,
-    category: ["JavaScript", "CSS"],
-  },
-  {
-    id: 13,
-    title: "Calculator",
-    description:
-      "Mini Calculator: Modern tool for daily math needs, with sleek design & intuitive UI.",
-    link: "https://imadjaha.github.io/calculator/",
-    image: project3,
-    category: ["JavaScript", "CSS"],
-  },
+
   {
     id: 14,
     title: "Tic Tac Toe",
     description:
       "Tic Tac Toe reimagined: Next.js React app with immersive gameplay and polished design.",
-    link: "https://imadjaha.github.io/tic-tac-toe-ReactJs_NextJs/",
+    link: "https://github.com/Imadjaha/tic-tac-toe-ReactJs_NextJs/",
+    liveDemoLink: "https://imadjaha.github.io/tic-tac-toe-ReactJs_NextJs/",
     image: project4,
     category: ["ReactJs", "NextJs", "Typescript", "CSS"],
-  },
-  {
-    id: 15,
-    title: "Portfolio",
-    description:
-      "My Portfolio created with NextJs and CSS, dockerized and deployed on GitHub.",
-    link: "https://imadjaha.github.io/portfolio/",
-    image: project15,
-    category: ["NextJs", "CSS"],
   },
 ];
 

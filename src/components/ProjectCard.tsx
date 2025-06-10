@@ -2,13 +2,14 @@ import { motion } from "framer-motion";
 import { FiGithub, FiExternalLink } from "react-icons/fi";
 
 interface ProjectCardProps {
-  id?: number;               // optional if coming from constants
+  id?: number; // optional if coming from constants
   title: string;
   description: string;
   image: string;
   link: string;
-  category: string[];        // e.g. ["AI & ML"]
-  tech?: string[];           // optional extra tags if you store them separately
+  liveDemoLink?: string;
+  category: string[]; // e.g. ["AI & ML"]
+  tech?: string[]; // optional extra tags if you store them separately
 }
 
 const ProjectCard = ({
@@ -17,6 +18,7 @@ const ProjectCard = ({
   image,
   link,
   category,
+  liveDemoLink,
   tech = [],
 }: ProjectCardProps) => {
   // first category is used for the ribbon badge
@@ -47,40 +49,6 @@ const ProjectCard = ({
         >
           {ribbon}
         </span>
-
-        {/* Hover overlay with buttons */}
-        <div
-          className="absolute inset-0 bg-black/60 opacity-0
-                     group-hover:opacity-100 transition-opacity
-                     flex items-center justify-center gap-4"
-        >
-          <a
-            href={link}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700
-                       text-white text-sm font-medium px-4 py-2 rounded-lg
-                       transition-transform transform hover:scale-105"
-          >
-            <FiGithub className="text-base" />
-            Source Code
-          </a>
-
-          {/* Live demo if using GitHub Pages link */}
-          {link.includes("github.io") && (
-            <a
-              href={link.replace("github.com", "github.io")}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-blue-600 hover:bg-blue-700
-                         text-white text-sm font-medium px-4 py-2 rounded-lg
-                         transition-transform transform hover:scale-105"
-            >
-              <FiExternalLink className="text-base" />
-              Live Demo
-            </a>
-          )}
-        </div>
       </div>
 
       {/* ──────────────── Card Content ──────────────── */}
@@ -93,30 +61,52 @@ const ProjectCard = ({
         </header>
 
         {/* Tech badges */}
-       <div className="flex flex-wrap gap-2">
-  { (tech.length ? tech : category).map((tag, idx) => (
-      <span
-        key={idx}
-        className="px-3 py-1 text-xs font-medium bg-purple-100/10 text-purple-300 rounded-full"
-      >
-        {tag}
-      </span>
-    ))
-  }
-</div>
+        <div className="flex flex-wrap gap-2">
+          {(tech.length ? tech : category).map((tag, idx) => (
+            <span
+              key={idx}
+              className="px-3 py-1 text-xs font-medium bg-purple-100/10 text-purple-300 rounded-full"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
 
-
-        {/* Source-code link row (always visible, bottom-left) */}
-        <div className="flex items-center gap-2 text-gray-400 text-sm pt-2">
-          <FiGithub />
+        {/* Project Links Section */}
+        <div className="flex items-center justify-between gap-4 pt-4 mt-4 border-t border-gray-700/30">
+          {/* Source Code Button */}
           <a
             href={link}
             target="_blank"
             rel="noopener noreferrer"
-            className="hover:text-purple-400 transition-colors"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium
+              text-gray-300 hover:text-white
+              bg-gray-700/50 hover:bg-gray-700
+              rounded-lg transition-all duration-300
+              hover:shadow-lg hover:shadow-purple-500/10
+              group"
           >
-            Source Code
+            <FiGithub className="text-base transition-transform group-hover:scale-110" />
+            <span>Source Code</span>
           </a>
+
+          {/* Live Demo Button */}
+          {liveDemoLink && (
+            <a
+              href={liveDemoLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium
+                bg-gradient-to-r from-purple-600 to-blue-600
+                hover:from-purple-700 hover:to-blue-700
+                text-white rounded-lg transition-all duration-300
+                hover:shadow-lg hover:shadow-purple-500/20
+                group"
+            >
+              <FiExternalLink className="text-base transition-transform group-hover:scale-110" />
+              <span>Live Demo</span>
+            </a>
+          )}
         </div>
       </div>
     </motion.article>

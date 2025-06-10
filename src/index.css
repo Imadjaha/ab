@@ -16,6 +16,11 @@
  
 }
 
+/* font for all elements */
+* {
+    font-family: 'Inter', sans-serif, 'Poppins', sans-serif;
+}
+
 @custom-variant dark (&:where(.dark, .dark *));
 
 
@@ -80,5 +85,57 @@ body{
   .slick-prev,
   .slick-next {
     display: none !important;
+  }
+}
+
+
+/* Custom highlight style */
+.highlight {
+  @apply text-purple-600 dark:text-purple-400 font-semibold;
+}
+
+/* Prose customization */
+.prose {
+  @apply max-w-none;
+}
+
+.prose strong.highlight {
+  @apply text-purple-600 dark:text-purple-400;
+}
+
+.prose p {
+  @apply mb-6 leading-relaxed;
+}
+
+/* Qualification timeline styles */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+}
+
+.timeline-dot {
+  animation: pulse 2s infinite;
+}
+
+/* Enhance backdrop blur */
+.backdrop-blur-sm {
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+/* Add to your existing CSS */
+html {
+  scroll-behavior: smooth;
+}
+
+.theme-bg {
+  background-image: 
+    radial-gradient(at 100% 100%, rgba(124, 58, 237, 0.05) 0px, transparent 50%),
+    radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.05) 0px, transparent 50%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
   }
 }

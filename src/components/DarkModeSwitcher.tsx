@@ -4,22 +4,28 @@ import { motion } from "framer-motion";
 
 export default function DarkModeSwitcher() {
   const [theme, setTheme] = useState(() => {
-    return localStorage.getItem("theme") || "light";
+    // Check localStorage first, if not set, default to "dark"
+    return localStorage.getItem("theme") || "dark";
   });
 
   useEffect(() => {
-    if (theme === "dark") {
+    // Set dark mode as default on first load
+    if (!localStorage.getItem("theme")) {
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    } else if (theme === "dark") {
       document.documentElement.classList.add("dark");
     } else {
       document.documentElement.classList.remove("dark");
     }
-    localStorage.setItem("theme", theme);
   }, [theme]);
 
   const toggleTheme = () => {
     setTheme(theme === "light" ? "dark" : "light");
+    localStorage.setItem("theme", theme === "light" ? "dark" : "light");
   };
 
+  // Rest of the component remains the same
   return (
     <div>
       <motion.button

@@ -38,16 +38,16 @@ const Projects = () => {
           {/* Filter */}
           <div className="flex items-center gap-3 flex-wrap">
             <FiFilter className="text-xl text-gray-400" />
-            <span className="text-sm font-medium ">Filter:</span>
+           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Filter:</span>
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCat(cat)}
                 className={`px-4 py-1.5 rounded-full text-sm transition-colors cursor-pointer
                   ${
-                    activeCat === cat
-                      ? "bg-purple-600 text-white"
-                      : "bg-gray-700/40  hover:bg-gray-600/40"
+                     activeCat === cat
+                      ? "bg-purple-600 text-white shadow-lg shadow-purple-500/20"
+                      : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700/40 dark:text-gray-300 dark:hover:bg-gray-600/40"
                   }`}
               >
                 {cat}
@@ -55,18 +55,21 @@ const Projects = () => {
             ))}
           </div>
 
-          {/* Search */}
+        {/* Search */}
           <div className="flex-grow lg:flex-grow-0 lg:ml-auto">
             <label className="relative block">
-              <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2" />
+              <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
               <input
                 type="text"
                 placeholder="Search projects..."
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
-                className="w-full lg:w-80 bg-gray-700/40 outline-none text-sm 
-                           rounded-lg py-2.5 pl-10 pr-4 dark:placeholder:text-gray-400
-                           focus:ring-2 focus:ring-purple-600"
+                className="w-full lg:w-80 bg-white dark:bg-gray-700/40 border border-gray-200 
+                         dark:border-transparent outline-none text-sm text-gray-900 dark:text-white
+                         rounded-lg py-2.5 pl-10 pr-4 placeholder:text-gray-400
+                         dark:placeholder:text-gray-400 transition-all duration-200
+                         focus:ring-2 focus:ring-purple-600 focus:border-transparent
+                         shadow-sm hover:shadow-md"
               />
             </label>
           </div>
