@@ -1,4 +1,4 @@
-import { Routes, Route } from "react-router-dom"
+import { Routes, Route, Navigate } from "react-router-dom"
 import Home from "./pages/Home"
 import Contact from "./pages/Contact"
 import Certificates from "./pages/Certificates"
@@ -18,7 +18,9 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/courses" element={<Courses />} />
-          <Route path="*" element={<NotFound />} />
+          {/* 404 handling */}
+          <Route path="/404" element={<NotFound />} />
+          <Route path="*" element={<Navigate replace to="/404" />} />
         </Routes>
       </main>
    </div>
