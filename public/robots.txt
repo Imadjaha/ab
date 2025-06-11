@@ -2,4 +2,12 @@ User-agent: *
 Disallow: /private/
 Allow: /
 
+
+# Allow crawling of images
+Allow: /*.png$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /apple-touch-icon.png
+Allow: /favicon*.png
+
 Sitemap: https://aimad-bouchouaf.com/sitemap.xml
