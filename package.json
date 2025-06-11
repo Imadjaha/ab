@@ -10,7 +10,7 @@
     "build": "npm run generate-favicons && vite build",
     "lint": "eslint .",
     "predeploy": "npm run build",
-    "postbuild": "node scripts/postbuild.js && cp public/site.webmanifest dist/",
+    "postbuild": "node scripts/postbuild.js && node scripts/generate-favicons.js",
     "preview": "vite preview",
     "deploy": "npm run build && npm run postbuild && gh-pages -d dist"
   },

@@ -136,7 +136,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/tic-tac-toe-ReactJs_NextJs/",
     liveDemoLink: "https://imadjaha.github.io/tic-tac-toe-ReactJs_NextJs/",
     image: project4,
-    category: ["ReactJs", "NextJs", "TypeScript", "CSS"],
+    category: [ "NextJs", "TypeScript", "CSS"],
   },
 ];
 
