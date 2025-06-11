@@ -9,6 +9,10 @@ export default defineConfig({
     outDir: 'dist',
     assetsDir: 'assets',
     rollupOptions: {
+       input: {
+        main: 'index.html',
+        verification: 'googlef99bd8e23d7d0c7f.html'
+      },
       output: {
         manualChunks: {
           vendor: ['react', 'react-dom', 'react-router-dom'],
