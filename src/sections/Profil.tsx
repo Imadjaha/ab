@@ -21,7 +21,8 @@ import {
   SiJunit5,
 } from "react-icons/si";
 
-import { FaJava, FaAws } from "react-icons/fa";
+import { FaJava, FaSitemap } from "react-icons/fa";
+import { SiPostman } from "react-icons/si";
 
 // Add this after your socialLinks constant
 const skillCategories = [
@@ -51,7 +52,7 @@ const skillCategories = [
       { name: "PostgreSQL", icon: SiPostgresql },
       { name: "MySQL", icon: SiMysql },
       { name: "MongoDB", icon: SiMongodb },
-      { name: "RESTful APIs", icon: FaAws },
+      { name: "RESTful APIs", icon: SiPostman },
       { name: "GraphQL", icon: SiGraphql },
     ],
   },
@@ -62,6 +63,7 @@ const skillCategories = [
       { name: "Docker", icon: SiDocker },
       { name: "GitLab CI/CD", icon: SiGitlab },
       { name: "JUnit", icon: SiJunit5 },
+      { name: "UML", icon: FaSitemap },
     ],
   },
 ];
@@ -86,7 +88,7 @@ const socialLinks = [
 
 export default function Profile() {
   return (
-    <section className="w-full py-16 theme-bg">
+    <section className="w-full py-10 theme-bg">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Animated Header */}
         <motion.div
@@ -154,7 +156,7 @@ export default function Profile() {
         >
           <div
             dangerouslySetInnerHTML={{ __html: profileBio }}
-            className="space-y-6 text-gray-600 dark:text-gray-300"
+            className="space-y-6 text-gray-600 dark:text-gray-300 text-justify"
           />
         </motion.div>
 
@@ -163,7 +165,7 @@ export default function Profile() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 space-y-8"
+          className="mt-12 space-y-6"
         >
           {skillCategories.map((category, categoryIndex) => (
             <motion.div

@@ -30,7 +30,7 @@ const ProjectCard = ({
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.4 }}
       viewport={{ once: true }}
-      className="theme-bg group rounded-xl overflow-hidden bg-gray-800/50 backdrop-blur-sm
+      className="theme-bg group rounded-xl overflow-hidden bg-gray-800/50 backdrop-blur-sm 
                  shadow-lg hover:shadow-xl transition-shadow"
     >
       {/* ──────────────── Image with badge & hover scale ──────────────── */}
@@ -73,7 +73,7 @@ const ProjectCard = ({
         </div>
 
         {/* Project Links Section */}
-        <div className="flex items-center justify-between gap-4 pt-4 mt-4 border-t border-gray-700/30">
+        <div className=" flex items-center justify-between gap-4 pt-4 mt-4 border-t border-gray-700/30">
           {/* Source Code Button */}
           <a
             href={link}

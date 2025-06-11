@@ -12,65 +12,75 @@ import {
   unitTestPythonCertificate,
 } from "../assets/images";
 
-// Define your certificates data
 const certificates = [
   {
     id: 1,
     title: "Clean Code",
     image: cleanCodeCertificate,
-    description: "Best practices and principles for writing maintainable code",
-    date: "2023",
+    description:
+      "Mastering software craftsmanship through clean, maintainable, and efficient coding practices",
     issuer: "Udemy",
   },
   {
     id: 2,
     title: "Docker",
     image: dockerCertificate,
-    description: "Containers and Docker",
-    date: "2023",
-    issuer: "Udemy",
+    description:
+      "Building and deploying containerized applications with Docker ecosystem",
+    issuer: "Kodekloud",
   },
   {
     id: 3,
     title: "Fullstack Development",
     image: fullstackCertificate,
-    description: "Fullstack Development",
-    date: "2023",
+    description:
+      "End-to-end web development using modern frameworks and best practices",
     issuer: "Udemy",
   },
   {
     id: 4,
     title: "React",
     image: reactCertificate,
-    description: "React",
-    date: "2023",
+    description:
+      "Building dynamic user interfaces with React.js and modern JavaScript",
     issuer: "Udemy",
   },
   {
     id: 5,
     title: "Dash Python",
     image: dashPythonCertificate,
-    description: "Dash Python",
-    date: "2023",
+    description:
+      "Creating interactive data visualizations and dashboards with Plotly Dash",
     issuer: "Udemy",
   },
   {
     id: 6,
     title: "Unit Test Python",
     image: unitTestPythonCertificate,
-    description: "Unit Test Python",
-    date: "2023",
+    description:
+      "Advanced testing strategies and test-driven development in Python",
     issuer: "Udemy",
   },
   {
     id: 7,
-    title: "Uni Test Spring Boot",
+    title: "Unit Test Spring Boot",
     image: uniTestSpringBootCertificate,
-    description: "Uni Test Spring Boot",
-    date: "2023",
+    description:
+      "Implementing robust testing patterns in Spring Boot applications",
     issuer: "Udemy",
   },
 ];
+
+const getBadgeStyles = (issuer: string) => {
+  switch (issuer) {
+    case "Kodekloud":
+      return "bg-blue-100 dark:bg-blue-900 text-blue-700 dark:text-blue-100";
+    case "Udemy":
+      return "bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-100";
+    default:
+      return "bg-gray-100 dark:bg-gray-900 text-gray-700 dark:text-gray-100";
+  }
+};
 
 export default function Certificates() {
   const settings = {
@@ -118,15 +128,16 @@ export default function Certificates() {
         transition={{ duration: 0.5 }}
         className="w-full max-w-4xl mx-auto px-2 sm:px-6 py-4 sm:py-6"
       >
-        <Slider {...settings}>
+        
+        <Slider {...settings} className="sm:w-full w-sm sm:h-full h-sm">
           {certificates.map((cert) => (
             <div key={cert.id} className="px-4">
-              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all hover:scale-[1.02] duration-300">
+              <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all hover:scale-[1.02] duration-300 mx-auto w-full">
                 <div className="relative sm:w-full w-80 sm:h-full h-sm  ">
                   <img
                     src={cert.image}
                     alt={cert.title}
-                    className="relative inset-0 w-full h-full object-cover"
+                    className=" w-full h-full object-cover  rounded-t-2xl"
                   />
                   <div className="relative inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
@@ -136,11 +147,14 @@ export default function Certificates() {
                     {cert.title}
                   </h3>
                   <div className="flex items-center gap-2 mb-3">
-                    <span className="px-3 py-1 text-sm bg-purple-100 dark:bg-purple-900 text-purple-700 dark:text-purple-100 rounded-full">
+                    <span
+                      className={`
+  px-3 py-1 text-sm rounded-full
+  transition-colors duration-200
+  ${getBadgeStyles(cert.issuer)}
+`}
+                    >
                       {cert.issuer}
-                    </span>
-                    <span className="text-gray-500 dark:text-gray-400">
-                      {cert.date}
                     </span>
                   </div>
                   <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">

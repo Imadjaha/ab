@@ -4,6 +4,7 @@ import Contact from "./pages/Contact"
 import Certificates from "./pages/Certificates"
 import Courses from "./pages/Courses"
 import NavBar from "./components/Navbar"
+import NotFound from "./pages/NotFound"
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/certificates" element={<Certificates />} />
           <Route path="/courses" element={<Courses />} />
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
    </div>
