@@ -5,30 +5,29 @@ import ProjectCard from "../components/ProjectCard";
 
 const categories = [
   "All Projects",
-  "TypeScript",
-  "Python",
-  "JavaScript",
-  "Java",
-  "Spring Boot",
-  "ReactJs",
-  "NextJs",
+  "Full Stack",
+  "Web Application",
+  "Game",
+  "AI & ML",
+  "Design Patterns",
 ];
 
 const Projects = () => {
   const [activeCat, setActiveCat] = useState<string>("All Projects");
   const [query, setQuery] = useState<string>("");
 
-  const filteredProjects = useMemo(() => {
-    return projects.filter((p) => {
-      const inCategory =
-        activeCat === "All Projects" || p.category.includes(activeCat);
-      const inSearch =
-        query.trim() === "" ||
-        p.title.toLowerCase().includes(query.toLowerCase()) ||
-        p.description.toLowerCase().includes(query.toLowerCase());
-      return inCategory && inSearch;
-    });
-  }, [activeCat, query]);
+ const filteredProjects = useMemo(() => {
+  const searchQuery = query.toLowerCase().trim();
+  return projects.filter((p) => {
+    const inCategory =
+      activeCat === "All Projects" || p.projectType.includes(activeCat);
+    const inSearch = !searchQuery || 
+      p.title.toLowerCase().includes(searchQuery) ||
+      p.category.some(tech => tech.toLowerCase().includes(searchQuery)) ||
+      p.description.toLowerCase().includes(searchQuery);
+    return inCategory && inSearch;
+  });
+}, [activeCat, query]);
 
   return (
     <section className="w-full py-12 theme-bg">
@@ -38,14 +37,16 @@ const Projects = () => {
           {/* Filter */}
           <div className="flex items-center gap-3 flex-wrap">
             <FiFilter className="text-xl text-gray-400" />
-           <span className="text-sm font-medium text-gray-700 dark:text-gray-300">Filter:</span>
+            <span className="text-sm font-medium text-gray-700 dark:text-gray-300">
+              Filter:
+            </span>
             {categories.map((cat) => (
               <button
                 key={cat}
                 onClick={() => setActiveCat(cat)}
                 className={`px-4 py-1.5 rounded-full text-sm transition-colors cursor-pointer
                   ${
-                     activeCat === cat
+                    activeCat === cat
                       ? "bg-purple-600 text-white shadow-lg shadow-purple-500/20"
                       : "bg-gray-100 text-gray-600 hover:bg-gray-200 dark:bg-gray-700/40 dark:text-gray-300 dark:hover:bg-gray-600/40"
                   }`}
@@ -55,7 +56,7 @@ const Projects = () => {
             ))}
           </div>
 
-        {/* Search */}
+          {/* Search */}
           <div className="flex-grow lg:flex-grow-0 lg:ml-auto">
             <label className="relative block">
               <FiSearch className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400" />
