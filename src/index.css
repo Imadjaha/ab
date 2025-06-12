@@ -88,6 +88,48 @@ body{
   }
 }
 
+/* Slider mobile fixes */
+.slider-container {
+  touch-action: pan-y pinch-zoom;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.slick-slide {
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.slick-slide.slick-active {
+  opacity: 1;
+}
+
+.slick-track {
+  display: flex !important;
+  align-items: center;
+}
+
+/* Prevent image dragging */
+.slick-slide img {
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+/* Fix height issues */
+.slick-list {
+  overflow: hidden !important;
+}
+
+@media (max-width: 768px) {
+  .slick-track {
+    height: auto !important;
+  }
+  
+  .slick-slide > div {
+    height: auto;
+  }
+}
 
 
 /* Custom highlight style */

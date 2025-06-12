@@ -7,7 +7,7 @@ export default function Footer() {
   }, []);
   return (
     <>
-      <div className="flex flex-col justify-center items-center bottom-8 w-full mt-6 ralative">
+      <div className="flex flex-col justify-center items-center bottom-8 w-full mt-6 ralative pb-4">
         <p>Designed and developed by Aimad Bouchouaf</p>
         <p>{`© ${year}. All Rights Reserved.`}</p>
       </div>

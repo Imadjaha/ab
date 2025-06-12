@@ -23,7 +23,7 @@ export const projects = [
     liveDemoLink: "",
     image: project11,
     category: ["Java", "Spring Boot", "ReactJs", "Redux",  "Tailwind"],
-    projectType: "Full Stack",
+    projectType: "Full  Stack",
   },
   {
     id: 2,
@@ -44,7 +44,7 @@ export const projects = [
       "Python",
       "ExpressJs",
     ],
-    projectType: "Full Stack",
+    projectType: "Full  Stack",
   },
   {
     id: 3,

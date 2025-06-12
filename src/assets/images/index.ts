@@ -18,6 +18,7 @@ import fullstackCertificate from "./c-fullstack.jpg";
 import reactCertificate from "./c-react.jpg";
 import uniTestSpringBootCertificate from "./c-unitTestSpringBoot.jpg";
 import unitTestPythonCertificate from "./c-unitTestPython.jpg";
+import fullstack2Certificate from "./c-fullstack2.jpg";
 
 export {
   project1,
@@ -39,4 +40,5 @@ export {
   reactCertificate,
   uniTestSpringBootCertificate,
   unitTestPythonCertificate,
+  fullstack2Certificate,
 };

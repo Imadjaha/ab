@@ -10,11 +10,20 @@ import {
   reactCertificate,
   uniTestSpringBootCertificate,
   unitTestPythonCertificate,
+  fullstack2Certificate,
 } from "../assets/images";
 
 const certificates = [
   {
     id: 1,
+    title: "Fullstack Development",
+    image: fullstack2Certificate,
+    description:
+      "Developing full-stack web applications from scratch with best practices and modern frameworks. This course covers all aspects of full-stack development, from front-end to back-end, as well as testing, deployment, and security.",
+    issuer: "Udemy",
+  },
+  {
+    id: 2,
     title: "Clean Code",
     image: cleanCodeCertificate,
     description:
@@ -22,7 +31,7 @@ const certificates = [
     issuer: "Udemy",
   },
   {
-    id: 2,
+    id: 3,
     title: "Docker",
     image: dockerCertificate,
     description:
@@ -30,15 +39,15 @@ const certificates = [
     issuer: "Kodekloud",
   },
   {
-    id: 3,
+    id: 4,
     title: "Fullstack Development",
     image: fullstackCertificate,
     description:
-      "End-to-end web development using modern frameworks and best practices",
+      "End-to-end web development using modern frameworks and best practices with Node.js, Express, MongoDB and React.js",
     issuer: "Udemy",
   },
   {
-    id: 4,
+    id: 5,
     title: "React",
     image: reactCertificate,
     description:
@@ -46,7 +55,7 @@ const certificates = [
     issuer: "Udemy",
   },
   {
-    id: 5,
+    id: 6,
     title: "Dash Python",
     image: dashPythonCertificate,
     description:
@@ -54,7 +63,7 @@ const certificates = [
     issuer: "Udemy",
   },
   {
-    id: 6,
+    id: 7,
     title: "Unit Test Python",
     image: unitTestPythonCertificate,
     description:
@@ -62,7 +71,7 @@ const certificates = [
     issuer: "Udemy",
   },
   {
-    id: 7,
+    id: 8,
     title: "Unit Test Spring Boot",
     image: uniTestSpringBootCertificate,
     description:
@@ -92,7 +101,11 @@ export default function Certificates() {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
-    adaptiveHeight: true,
+    lazyLoad: "ondemand",
+    swipeToSlide: true,
+    touchThreshold: 15,
+    useCSS: true,
+    useTransform: true,
     responsive: [
       {
         breakpoint: 1024,
@@ -106,7 +119,10 @@ export default function Certificates() {
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
-          arrows: false, // Hides arrows for small devices
+          arrows: false,
+          dots: true,
+          touchMove: true,
+          swipe: true,
         },
       },
       {
@@ -116,6 +132,9 @@ export default function Certificates() {
           slidesToScroll: 1,
           arrows: false,
           dots: true,
+          touchMove: true,
+          swipe: true,
+          adaptiveHeight: true,
         },
       },
     ],
@@ -129,16 +148,20 @@ export default function Certificates() {
         transition={{ duration: 0.5 }}
         className="w-full max-w-4xl mx-auto px-2 sm:px-6 py-4 sm:py-6"
       >
-        
-        <Slider {...settings} className="sm:w-full w-sm sm:h-full h-sm">
+        <Slider
+          {...settings}
+          className="sm:w-full w-sm sm:h-full h-lg slider-container"
+        >
           {certificates.map((cert) => (
-            <div key={cert.id} className="px-4">
+            <div key={cert.id} className="px-4 outline-none">
               <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-xl overflow-hidden transform transition-all hover:scale-[1.02] duration-300 mx-auto w-full">
-                <div className="relative sm:w-full w-80 sm:h-full h-sm  ">
+                <div className="relative sm:w-full w-90 sm:h-full h-lg ">
                   <img
                     src={cert.image}
                     alt={cert.title}
                     className=" w-full h-full object-cover  rounded-t-2xl"
+                    loading="lazy"
+                    draggable="false"
                   />
                   <div className="relative inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 </div>
@@ -147,7 +170,7 @@ export default function Certificates() {
                   <h3 className="text-xl sm:text-2xl font-bold mb-2 text-gray-900 dark:text-white">
                     {cert.title}
                   </h3>
-                  <div className="flex items-center gap-2 mb-3">
+                  <div className="flex items-center gap-2 mb-3 ">
                     <span
                       className={`
   px-3 py-1 text-sm rounded-full
@@ -158,7 +181,7 @@ export default function Certificates() {
                       {cert.issuer}
                     </span>
                   </div>
-                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300">
+                  <p className="text-sm sm:text-base text-gray-600 dark:text-gray-300 sm:pb-0 pb-4">
                     {cert.description}
                   </p>
                 </div>
