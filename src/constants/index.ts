@@ -22,8 +22,15 @@ export const projects = [
     link: "https://github.com/Imadjaha/Media-Management-Tool",
     liveDemoLink: "",
     image: project11,
-    category: ["Java", "Spring Boot", "ReactJs", "Redux",  "Tailwind"],
-    projectType: "Full  Stack",
+    category: [
+      "Java",
+      "Spring Boot",
+      "JavaScript",
+      "ReactJs",
+      "Redux",
+      "Tailwind",
+    ],
+    projectType: "Full-Stack",
   },
   {
     id: 2,
@@ -36,15 +43,15 @@ export const projects = [
     category: [
       "Java",
       "Spring Boot",
-      "ReactJs",
-      "Redux",
-      "CSS",
-      "Tailwind",
       "JavaScript",
-      "Python",
+      "ReactJs",
       "ExpressJs",
+      "Redux",
+      "Python",
+      "Flask",
+      "Tailwind",
     ],
-    projectType: "Full  Stack",
+    projectType: "Full-Stack",
   },
   {
     id: 3,
@@ -65,7 +72,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/pomodoro",
     liveDemoLink: "https://imadjaha.github.io/pomodoro/",
     image: project13,
-    category: ["ReactJs", "Tailwind", "CSS", "TypeScript"],
+    category: ["TypeScript", "ReactJs", "Tailwind"],
     projectType: "Web Application",
   },
   {
@@ -87,7 +94,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/benefitHub",
     liveDemoLink: "https://imadjaha.github.io/benefitHub/",
     image: project5,
-    category: ["ReactJs", "TypeScript", "Tailwind"],
+    category: ["TypeScript", "ReactJs", "Tailwind"],
     projectType: "Web Application",
   },
   {
@@ -98,8 +105,8 @@ export const projects = [
     link: "https://github.com/Imadjaha/hangman",
     liveDemoLink: "https://imadjaha.github.io/hangman/",
     image: project7,
-    category: ["ReactJs", "TypeScript", "CSS"],
-    projectType: ["Web Application","Game"],
+    category: ["TypeScript", "ReactJs", "CSS"],
+    projectType: ["Web Application", "Game"],
   },
   {
     id: 8,
@@ -120,7 +127,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/Flappy-Bird",
     liveDemoLink: "",
     image: project9,
-    category: ["Java"],
+    category: ["Java", "JavaFX"],
     projectType: "Game",
   },
   {
@@ -131,7 +138,7 @@ export const projects = [
     link: "https://github.com/Imadjaha/Calories-Calculator",
     liveDemoLink: "https://calories-calculator-six.vercel.app/",
     image: project10,
-    category: ["NextJs", "CSS"],
+    category: ["JavaScript", "NextJs", "CSS"],
     projectType: "Web Application",
   },
 
@@ -144,7 +151,7 @@ export const projects = [
     liveDemoLink: "https://imadjaha.github.io/guess-the-word-game/",
     image: project1,
     category: ["JavaScript", "CSS"],
-    projectType: ["Web Application","Game"],
+    projectType: ["Web Application", "Game"],
   },
 
   {
@@ -155,8 +162,8 @@ export const projects = [
     link: "https://github.com/Imadjaha/tic-tac-toe-ReactJs_NextJs/",
     liveDemoLink: "https://imadjaha.github.io/tic-tac-toe-ReactJs_NextJs/",
     image: project4,
-    category: ["NextJs", "TypeScript", "CSS"],
-    projectType: ["Web Application","Game"],
+    category: ["TypeScript", "NextJs", "CSS"],
+    projectType: ["Web Application", "Game"],
   },
 ];
 

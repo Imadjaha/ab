@@ -5,7 +5,7 @@ import ProjectCard from "../components/ProjectCard";
 
 const categories = [
   "All Projects",
-  "Full Stack",
+  "Full-Stack",
   "Web Application",
   "Game",
   "AI & ML",

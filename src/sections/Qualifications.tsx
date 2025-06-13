@@ -36,13 +36,13 @@ export default function Qualifications() {
 
         <motion.div variants={item} className="relative">
           {/* Timeline line - Improved visibility */}
-          <div className="absolute left-0 sm:left-1/2 transform -translate-x-px 
+          <div className="absolute left-0 transform -translate-x-px 
                          h-full w-1 bg-gradient-to-b from-purple-600 
                          via-blue-600 to-purple-600 opacity-50 sm:opacity-100"></div>
 
           {/* 3M Experience */}
           <div className="relative flex sm:flex-row flex-col sm:items-center mb-8 sm:mb-16">
-            <div className="flex-1 sm:pr-8 sm:text-right order-2 sm:order-1 pl-8 sm:pl-0">
+            <div className="flex-1 sm:pr-8 sm:text-right order-2 sm:order-1 pl-8 sm:pl-0 sm:ml-6 ml-0">
               <motion.div
                 variants={item}
                 className="bg-white/10 backdrop-blur-sm dark:bg-gray-800/50 
@@ -93,8 +93,8 @@ export default function Qualifications() {
               </motion.div>
             </div>
              {/* Timeline dot - Improved mobile visibility */}
-            <div className="absolute left-0 sm:left-1/2 transform -translate-x-1/2 
-                           flex items-center justify-center order-1 sm:order-2 top-0 sm:top-1/2 sm:-translate-y-1/2">
+            <div className="absolute left-0  transform -translate-x-1/2 
+                           flex items-center justify-center order-1 sm:order-2 top-1/2">
               <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-4 
                             border-purple-600 bg-white dark:bg-gray-800 
                             shadow-md"></div>
@@ -143,8 +143,8 @@ export default function Qualifications() {
               </motion.div>
             </div>
           {/* Timeline dot */}
-            <div className="absolute left-0 sm:left-1/2 transform -translate-x-1/2 
-                           flex items-center justify-center order-1 top-0 sm:top-1/2 sm:-translate-y-1/2">
+            <div className="absolute left-0  transform -translate-x-1/2 
+                           flex items-center justify-center order-1 top-1/2 sm:-translate-y-1/2">
               <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-4 
                             border-blue-600 bg-white dark:bg-gray-800 
                             shadow-md"></div>
