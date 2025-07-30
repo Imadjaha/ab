@@ -10,6 +10,9 @@ import project11 from "./project11.png";
 import project12 from "./project12.png";
 import project13 from "./project13.png";
 import project14 from "./project14.png";
+import project15 from "./project15.png";
+import project16 from "./project16.png";
+import project17 from "./project17.png";
 
 import dockerCertificate from "./c-docker.jpg";
 import dashPythonCertificate from "./c-dashPython.jpg";
@@ -33,6 +36,9 @@ export {
   project12,
   project13,
   project14,
+  project15,
+  project16,
+  project17,
   dockerCertificate,
   dashPythonCertificate,
   cleanCodeCertificate,

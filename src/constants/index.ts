@@ -11,86 +11,17 @@ import {
   project12,
   project13,
   project14,
+  project15,
+  project16,
+  project17,
 } from "../assets/images";
 
 export const projects = [
   {
     id: 1,
-    title: "Media Management Tool",
-    description:
-      "Engineered a robust digital asset management solution that streamlines media organization, enhances team collaboration, and reduces asset retrieval time by 60%. Features automated cataloging, intuitive search, and advanced access control.",
-    link: "https://github.com/Imadjaha/Media-Management-Tool",
-    liveDemoLink: "",
-    image: project11,
-    category: [
-      "Java",
-      "Spring Boot",
-      "JavaScript",
-      "ReactJs",
-      "Redux",
-      "Tailwind",
-    ],
-    projectType: "Full-Stack",
-  },
-  {
-    id: 2,
-    title: "E-Commerce Website",
-    description:
-      "Developed a scalable e-commerce platform handling 1000+ products with multi-vendor support. Implemented secure payment processing, real-time inventory management, and analytics dashboard for business insights.",
-    link: "https://github.com/Imadjaha/e-commerce",
-    liveDemoLink: "",
-    image: project14,
-    category: [
-      "Java",
-      "Spring Boot",
-      "JavaScript",
-      "ReactJs",
-      "ExpressJs",
-      "Redux",
-      "Python",
-      "Flask",
-      "Tailwind",
-    ],
-    projectType: "Full-Stack",
-  },
-  {
-    id: 3,
-    title: "Price Predictor",
-    description:
-      "Created an intelligent pricing engine that analyzes market trends and competition to optimize product pricing strategies. Achieved 85% prediction accuracy, helping businesses maximize revenue while maintaining market competitiveness.",
-    link: "https://github.com/Imadjaha/dynamic-pricing-prediction",
-    liveDemoLink: "",
-    image: project2,
-    category: ["Python", "Scikit-Learn", "Pandas", "Matplotlib"],
-    projectType: "AI & ML",
-  },
-  {
-    id: 4,
-    title: "Pomodoro Timer",
-    description:
-      "Designed an elegant productivity tool that has helped over 500 users improve their work efficiency. Features customizable work sessions, break reminders, and progress tracking to enhance focus and time management.",
-    link: "https://github.com/Imadjaha/pomodoro",
-    liveDemoLink: "https://imadjaha.github.io/pomodoro/",
-    image: project13,
-    category: ["TypeScript", "ReactJs", "Tailwind"],
-    projectType: "Web Application",
-  },
-  {
-    id: 5,
-    title: "Strategy Design Pattern",
-    description:
-      "Implemented a flexible business logic framework that reduces code complexity and maintenance costs. Enables rapid strategy updates without system downtime, improving business agility and reducing technical debt.",
-    link: "https://github.com/Imadjaha/strategy-design-pattern",
-    liveDemoLink: "",
-    image: project12,
-    category: ["Java", "ReactJs"],
-    projectType: "Design Patterns",
-  },
-  {
-    id: 6,
     title: "Benefit Hub",
     description:
-      "Revolutionized partnership management with a centralized platform that streamlines benefit tracking and partner relationship management. Reduced administrative overhead by 40% and improved partner satisfaction scores.",
+      "A centralized platform for managing partnerships and benefits. Simplifies benefit tracking, improves partner satisfaction, and reduces administrative overhead by 40%. Ideal for organizations looking to streamline collaboration and enhance partner relationships.",
     link: "https://github.com/Imadjaha/benefitHub",
     liveDemoLink: "https://imadjaha.github.io/benefitHub/",
     image: project5,
@@ -98,10 +29,75 @@ export const projects = [
     projectType: "Web Application",
   },
   {
+    id: 2,
+    title: "E-Commerce Website",
+    description:
+      "A scalable e-commerce platform supporting 1000+ products and multi-vendor functionality. Features secure payment processing, real-time inventory management, and an analytics dashboard for business insights. Perfect for businesses aiming to expand their online presence.",
+    link: "https://github.com/Imadjaha/e-commerce",
+    liveDemoLink: "",
+    image: project14,
+    category: ["Java", "Spring Boot", "ReactJs", "Redux", "Tailwind","Flask","ExpressJs"],
+    projectType: "Full-Stack",
+  },
+  {
+    id: 3,
+    title: "Serverless S3 Explorer",
+    description:
+      "A user-friendly tool for managing and accessing S3 resources. Enables users to explore S3 buckets, download files, and perform searches with ease. Ideal for teams working with cloud storage solutions.",
+    link: "https://github.com/Imadjaha/serverless-s3-explorer",
+    image: project15,
+    category: ["Python", "Dash", "Boto3"],
+    projectType: "Web Application",
+  },
+  {
+    id: 4,
+    title: "Media Management Tool",
+    description:
+      "A robust digital asset management solution that streamlines media organization, enhances team collaboration, and reduces asset retrieval time by 60%. Features automated cataloging, intuitive search, and advanced access control.",
+    link: "https://github.com/Imadjaha/Media-Management-Tool",
+    liveDemoLink: "",
+    image: project11,
+    category: ["Java", "Spring Boot", "ReactJs", "Redux", "Tailwind"],
+    projectType: "Full-Stack",
+  },
+
+  {
+    id: 5,
+    title: "Price Predictor",
+    description:
+      "An intelligent pricing engine that analyzes market trends and competition to optimize product pricing strategies. Achieved 85% prediction accuracy, helping businesses maximize revenue while staying competitive.",
+    link: "https://github.com/Imadjaha/dynamic-pricing-prediction",
+    liveDemoLink: "",
+    image: project2,
+    category: ["Python", "Scikit-Learn", "Pandas", "Matplotlib"],
+    projectType: "AI & ML",
+  },
+  {
+    id: 6,
+    title: "Pomodoro Timer",
+    description:
+      "A productivity tool designed to help users improve focus and time management. Features customizable work sessions, break reminders, and progress tracking. Trusted by over 500 users to enhance efficiency.",
+    link: "https://github.com/Imadjaha/pomodoro",
+    liveDemoLink: "https://imadjaha.github.io/pomodoro/",
+    image: project13,
+    category: ["TypeScript", "ReactJs", "Tailwind"],
+    projectType: "Web Application",
+  },
+  {
     id: 7,
+    title: "Inventory Management System",
+    description:
+      "A secure system for tracking and managing inventory levels. Enhances data security, streamlines operations, and reduces the risk of data breaches. Ideal for businesses seeking efficient inventory control.",
+    link: "https://github.com/Imadjaha/inventory-management-system",
+    image: project16,
+    category: ["Java", "Spring Boot"],
+    projectType: "Full-Stack",
+  },
+  {
+    id: 8,
     title: "Hangman Game",
     description:
-      "Built an engaging educational game that makes vocabulary learning fun and interactive. Features adaptive difficulty levels and progress tracking, helping users expand their vocabulary through gamified learning.",
+      "An engaging educational game that makes vocabulary learning fun and interactive. Features adaptive difficulty levels and progress tracking, helping users expand their vocabulary through gamified learning.",
     link: "https://github.com/Imadjaha/hangman",
     liveDemoLink: "https://imadjaha.github.io/hangman/",
     image: project7,
@@ -109,10 +105,10 @@ export const projects = [
     projectType: ["Web Application", "Game"],
   },
   {
-    id: 8,
+    id: 9,
     title: "Snake Game",
     description:
-      "Reimagined the classic Snake game with modern design principles and engaging mechanics. Implemented progressive difficulty scaling and achievement system to enhance player engagement.",
+      "A modern take on the classic Snake game with engaging mechanics and progressive difficulty scaling. Features an achievement system to enhance player engagement.",
     link: "https://github.com/Imadjaha/snake-game",
     liveDemoLink: "",
     image: project8,
@@ -120,10 +116,43 @@ export const projects = [
     projectType: "Game",
   },
   {
-    id: 9,
+    id: 10,
+    title: "Tic Tac Toe",
+    description:
+      "A modern version of the classic game with smart AI opponents and multiplayer functionality. Features an achievement system for an engaging social gaming experience.",
+    link: "https://github.com/Imadjaha/tic-tac-toe-ReactJs_NextJs/",
+    liveDemoLink: "https://imadjaha.github.io/tic-tac-toe-ReactJs_NextJs/",
+    image: project4,
+    category: ["TypeScript", "NextJs", "CSS"],
+    projectType: ["Web Application", "Game"],
+  },
+  {
+    id: 11,
+    title: "Calories Calculator",
+    description:
+      "An intuitive health tool that helps users make informed dietary decisions. Features personalized recommendations and progress tracking to support users in achieving their health goals.",
+    link: "https://github.com/Imadjaha/Calories-Calculator",
+    liveDemoLink: "https://calories-calculator-six.vercel.app/",
+    image: project10,
+    category: ["JavaScript", "NextJs", "CSS"],
+    projectType: "Web Application",
+  },
+  {
+    id: 12,
+    title: "Strategy Design Pattern",
+    description:
+      "A flexible business logic framework that reduces code complexity and maintenance costs. Enables rapid strategy updates without system downtime, improving business agility.",
+    link: "https://github.com/Imadjaha/strategy-design-pattern",
+    liveDemoLink: "",
+    image: project12,
+    category: ["Java", "ReactJs"],
+    projectType: "Design Patterns",
+  },
+  {
+    id: 13,
     title: "Flappy Bird",
     description:
-      "Crafted an addictive gaming experience with polished mechanics and seamless controls. Incorporated analytics to track user engagement and optimize gameplay difficulty in real-time.",
+      "An addictive gaming experience with polished mechanics and seamless controls. Features analytics to track user engagement and optimize gameplay difficulty in real-time.",
     link: "https://github.com/Imadjaha/Flappy-Bird",
     liveDemoLink: "",
     image: project9,
@@ -131,19 +160,18 @@ export const projects = [
     projectType: "Game",
   },
   {
-    id: 10,
-    title: "Calories Calculator",
+    id: 14,
+    title: "Visitor Design Pattern",
     description:
-      "Developed an intuitive health tool that helps users make informed dietary decisions. Features personalized recommendations and progress tracking, supporting users in achieving their health goals.",
-    link: "https://github.com/Imadjaha/Calories-Calculator",
-    liveDemoLink: "https://calories-calculator-six.vercel.app/",
-    image: project10,
-    category: ["JavaScript", "NextJs", "CSS"],
-    projectType: "Web Application",
+      "Implemented a visitor design pattern to simplify object manipulation and extension, enhancing code maintainability and extensibility.",
+    link: "https://github.com/Imadjaha/visitor-design-pattern",
+    liveDemoLink: "",
+    image: project17,
+    category: ["Java"],
+    projectType: "Design Patterns",
   },
-
   {
-    id: 11,
+    id: 17,
     title: "Guess The Word Game",
     description:
       "Created an immersive word puzzle game that challenges players while building vocabulary skills. Features dynamic difficulty adjustment and social sharing capabilities to drive user engagement.",
@@ -151,18 +179,6 @@ export const projects = [
     liveDemoLink: "https://imadjaha.github.io/guess-the-word-game/",
     image: project1,
     category: ["JavaScript", "CSS"],
-    projectType: ["Web Application", "Game"],
-  },
-
-  {
-    id: 12,
-    title: "Tic Tac Toe",
-    description:
-      "Elevated the classic game with modern UX design and smart AI opponent. Implemented multiplayer functionality and achievement system, creating an engaging social gaming experience.",
-    link: "https://github.com/Imadjaha/tic-tac-toe-ReactJs_NextJs/",
-    liveDemoLink: "https://imadjaha.github.io/tic-tac-toe-ReactJs_NextJs/",
-    image: project4,
-    category: ["TypeScript", "NextJs", "CSS"],
     projectType: ["Web Application", "Game"],
   },
 ];

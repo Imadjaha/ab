@@ -18,7 +18,7 @@ export default function Qualifications() {
   };
 
   return (
-     <section className="w-full py-8 sm:py-16">
+    <section className="w-full py-8 sm:py-16">
       <motion.div
         initial="hidden"
         animate="show"
@@ -36,12 +36,14 @@ export default function Qualifications() {
 
         <motion.div variants={item} className="relative">
           {/* Timeline line - Improved visibility */}
-          <div className="absolute left-0 transform -translate-x-px 
+          <div
+            className="absolute left-0 transform -translate-x-px 
                          h-full w-1 bg-gradient-to-b from-purple-600 
-                         via-blue-600 to-purple-600 opacity-50 sm:opacity-100"></div>
+                         via-blue-600 to-purple-600 opacity-50 sm:opacity-100"
+          ></div>
 
           {/* 3M Experience */}
-          <div className="relative flex sm:flex-row flex-col sm:items-center mb-8 sm:mb-16">
+          <div className="relative flex sm:flex-row flex-col sm:items-center mb-6 sm:mb-6">
             <div className="flex-1 sm:pr-8 sm:text-right order-2 sm:order-1 pl-8 sm:pl-0 sm:ml-6 ml-0">
               <motion.div
                 variants={item}
@@ -49,8 +51,10 @@ export default function Qualifications() {
                            p-4 sm:p-6 rounded-xl shadow-lg hover:shadow-xl 
                            transition-all duration-300"
               >
-                <h3 className="text-lg sm:text-xl font-bold text-purple-600 
-                             dark:text-purple-400 mb-2 break-words">
+                <h3
+                  className="text-lg sm:text-xl font-bold text-purple-600 
+                             dark:text-purple-400 mb-2 break-words"
+                >
                   Working Student Software Engineering
                 </h3>
                 <p className="text-gray-600 dark:text-gray-300 font-medium mb-2">
@@ -69,13 +73,8 @@ export default function Qualifications() {
                   </li>
                   <li className="flex items-center justify-end gap-2">
                     <span>
-                      Integration of JavaScript for dynamicclient-side
-                      interactions
+                      Integration of JavaScript for client-side interactions
                     </span>
-                    <span className="w-2 h-2 bg-purple-600 rounded-full flex-shrink-0"></span>
-                  </li>
-                  <li className="flex items-center justify-end gap-2">
-                    <span>Utilizing GraphQL for efficient data management</span>
                     <span className="w-2 h-2 bg-purple-600 rounded-full flex-shrink-0"></span>
                   </li>
                   <li className="flex items-center justify-end gap-2">
@@ -84,25 +83,28 @@ export default function Qualifications() {
                   </li>
                   <li className="flex items-center justify-end gap-2">
                     <span>
-                      Working with AWS Cloud services for application
-                      enhancement
+                      Working with AWS S3 for data storage and retrieval
                     </span>
                     <span className="w-2 h-2 bg-purple-600 rounded-full flex-shrink-0"></span>
                   </li>
                 </ul>
               </motion.div>
             </div>
-             {/* Timeline dot - Improved mobile visibility */}
-            <div className="absolute left-0  transform -translate-x-1/2 
-                           flex items-center justify-center order-1 sm:order-2 top-1/2">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-4 
+            {/* Timeline dot - Improved mobile visibility */}
+            <div
+              className="absolute left-0  transform -translate-x-1/2 
+                           flex items-center justify-center order-1 sm:order-2 top-1/2"
+            >
+              <div
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-4 
                             border-purple-600 bg-white dark:bg-gray-800 
-                            shadow-md"></div>
+                            shadow-md"
+              ></div>
             </div>
           </div>
 
           {/* Zwilling Experience */}
-                   <div className="relative flex sm:flex-row flex-col sm:items-center">
+          <div className="relative flex sm:flex-row flex-col sm:items-center">
             <div className="flex-1 sm:pl-8 order-2 pl-8 sm:pl-8">
               <motion.div
                 variants={item}
@@ -142,12 +144,16 @@ export default function Qualifications() {
                 </ul>
               </motion.div>
             </div>
-          {/* Timeline dot */}
-            <div className="absolute left-0  transform -translate-x-1/2 
-                           flex items-center justify-center order-1 top-1/2 sm:-translate-y-1/2">
-              <div className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-4 
+            {/* Timeline dot */}
+            <div
+              className="absolute left-0  transform -translate-x-1/2 
+                           flex items-center justify-center order-1 top-1/2 sm:-translate-y-1/2"
+            >
+              <div
+                className="w-6 h-6 sm:w-8 sm:h-8 rounded-full border-4 
                             border-blue-600 bg-white dark:bg-gray-800 
-                            shadow-md"></div>
+                            shadow-md"
+              ></div>
             </div>
           </div>
         </motion.div>
